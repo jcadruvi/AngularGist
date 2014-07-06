@@ -4,16 +4,16 @@
     // Create the module and define its dependencies.
     var app = angular.module('app', [
         // Angular modules
-        //'ngRoute'           // routing
+        'ngRoute'           // routing
     ]);
 
     app.config(['$locationProvider', '$routeProvider',
         function ($locationProvider, $routeProvider) {
             $locationProvider.hashPrefix('!');
-            /*$routeProvider.
+            $routeProvider.
              when('/', {
              templateUrl:  ''
-             });*/
+             });
         }]);
 
     // Execute bootstrapping code and any dependencies.
@@ -21,5 +21,4 @@
         function ($q, $rootScope) {
 
         }]);
-
 })();
