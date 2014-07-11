@@ -4,7 +4,8 @@
     // Create the module and define its dependencies.
     var app = angular.module('app', [
         // Angular modules
-        'ngRoute'           // routing
+        'ngRoute',           // routing
+        'gist'
     ]);
 
     app.config(['$locationProvider', '$routeProvider',
@@ -13,7 +14,7 @@
             $routeProvider.
              when('/', {
                 controller: 'gistController',
-                template:  '<div>{{ message }}</div><code data-gist-id="7df23c23ce100e192655"></code><script src="https://gist.github.com/jcadruvi/7df23c23ce100e192655.js" type="text/javascript"></script>'
+                template:  '<div>{{ message }}</div><gist id="7df23c23ce100e192655"></gist><script src="https://gist.github.com/jcadruvi/7df23c23ce100e192655.js" type="text/javascript"></script>'
              });
         }]);
 
